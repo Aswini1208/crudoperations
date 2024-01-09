@@ -2,25 +2,26 @@ package com.crud.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.crud.Entity.Cities;
+import com.crud.entity.Cities;
+import com.crud.service.CitiesService;
 
-import demo.crud.service.CitiesService;
 @RestController
-@RequestMapping("/Neeraj")
+@RequestMapping("/demo")
 public class Controller {
-	
+
+	@Autowired
 	private CitiesService citiesService;
-	
-	public List<Cities> getallcities(){
-		
+
+	@GetMapping("/all")
+	public List<Cities> getallcities() {
 		List<Cities> allcities = citiesService.getallcities();
-		return  allcities;
-		
-	
-	
+		return allcities;
+
 	}
 
 }

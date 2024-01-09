@@ -1,11 +1,15 @@
-package com.crud.Entity;
+package com.crud.entity;
 
-import jakarta.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity(name = "city")
 public class Cities {
+	@Id
 	private Integer id;
 	private String name;
-	@Id
+	@Column(name="CountryCode")
 	private String CountryCode;
 	public Integer getId() {
 		return id;

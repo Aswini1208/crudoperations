@@ -1,5 +1,4 @@
 package com.example.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,7 +8,7 @@ public class City {
 	private Integer id;
 	private String name;
 	private String countrycode;
-	private String population;
+	private Integer population;
 	public Integer getId() {
 		return id;
 	}
@@ -28,11 +27,10 @@ public class City {
 	public void setCountrycode(String countrycode) {
 		this.countrycode = countrycode;
 	}
-	public String getPopulation() {
+	public Integer getPopulation() {
 		return population;
 	}
-	public void setPopulation(String population) {
+	public void setPopulation(Integer population) {
 		this.population = population;
 	}
-
 }
